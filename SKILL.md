@@ -26,6 +26,7 @@ When user shares a meal photo or describes food:
 
 1. Identify all food items, estimate portion sizes
 2. Reference `references/nutrition.md` for caloric density, macro ratios
+3. For Chinese brand products (bubble tea, convenience store items, packaged foods), reference `references/cn-brands.md` for accurate nutritional data
 3. Calculate: calories, protein (g), carbs (g), fat (g), fiber (g)
 4. Compare against user's daily targets from `health/goals.md`
 5. Provide remaining budget for the day
