@@ -91,14 +91,54 @@ health-coach/
     └── apple_health.py         # Apple Health 数据解析
 ```
 
+## 更新日志
+
+### v0.2.0 — 2026-03-05
+
+#### 🆕 新增
+- **中国品牌食品热量数据库** (`references/cn-brands.md`) — 611行，覆盖中国市场常见食品
+  - 🧋 奶茶：乐乐茶、喜茶、霸王茶姬、瑞幸、星巴克、奈雪、茶百道（含少糖/缓糖版本）
+  - 🍶 酒类：盒马果酒、啤酒(8品牌)、威士忌、伏特加、白酒、红酒 + 减脂饮酒排名
+  - 🍡 甜品/烘焙：糖葫芦、好利来、鲍师傅、泸溪河
+  - 🏪 便利店：全家、7-Eleven、便利蜂
+  - 🛒 超市：山姆会员店（烘焙/熟食/冷冻/零食）、Costco开市客、盒马
+  - 🥡 快餐：麦当劳、肯德基、汉堡王、赛百味、必胜客、吉野家、真功夫
+  - 🥘 中式菜品：家常菜27道、粥粉面9种、外卖套餐8类
+  - 🍢 火锅：19种食材 + 5种蘸料热量对比
+  - 🔥 烧烤：11种常见串
+  - 🌅 早餐：煎饼果子、油条、包子等13种
+  - 🍮 甜品饮品：8种甜品 + 碳酸饮料/果汁/功能饮料26种
+  - 🍫 零食品牌：良品铺子、三只松鼠、百草味
+  - 🥛 乳制品：牛奶5品牌、酸奶5品牌、蛋白粉4品牌
+  - 🍜 方便食品：11种（螺蛳粉、自热锅、拉面说等）
+- **免责声明** — 中英双语免责声明（SKILL.md + README.md）
+- **模型兼容性说明** — 标注基于 Claude Opus 4.6 开发测试
+
+#### 🔧 改进
+- SKILL.md 饮食分析workflow增加 cn-brands.md 引用
+
+### v0.1.0 — 2026-03-03
+- 初始版本发布
+- 完整知识库：nutrition、medical-markers、exercise、supplements、medications、apple-health
+- 脚本：init.sh、report.sh、apple_health.py
+- 支持中英双语
+
 ## 贡献
 
 欢迎 PR！特别需要：
 
-- 更多菜系热量数据（日料、韩餐、印度菜等）
-- Garmin/Fitbit 数据导入
-- 训练计划生成器
-- 更多语言支持
+- 📦 **食品数据** — 更多品牌/菜系（日料、韩餐、印度菜、东南亚菜等）
+- 🔗 **数据源集成** — FatSecret API、Open Food Facts 等开放数据库对接
+- 🏋️ **训练计划生成器**
+- 📱 **Garmin/Fitbit 数据导入**
+- 🌍 **更多语言支持**
+
+### 如何贡献食品数据
+
+1. Fork 本仓库
+2. 编辑 `references/cn-brands.md`，按现有格式添加数据
+3. 数据来源请优先使用**产品包装营养标签**
+4. 提交 PR，注明数据来源
 
 ## 许可
 
@@ -174,14 +214,45 @@ The `references/` directory contains clinical-grade knowledge:
 
 All health data stays 100% local in your workspace. Nothing is uploaded, shared, or transmitted. The skill operates entirely through local files and your AI agent's context.
 
+## Changelog
+
+### v0.2.0 — 2026-03-05
+
+#### 🆕 New
+- **Chinese Brand Food Nutrition Database** (`references/cn-brands.md`) — 600+ entries covering the Chinese market
+  - Bubble tea (LELECHA, HEYTEA, CHAGEE, Luckin, Starbucks, Nayuki, ChaPanda)
+  - Alcohol (craft beers, whisky, vodka, baijiu, wine + fat-loss ranking)
+  - Supermarkets (Sam's Club, Costco, FRESHIPPO/Hema)
+  - Fast food (McDonald's, KFC, Burger King, Subway, Pizza Hut, Yoshinoya)
+  - Chinese dishes (27 home-style, 9 noodle/congee, 8 takeout combos)
+  - Hotpot ingredients (19 items + 5 dipping sauces with calorie comparison)
+  - BBQ, breakfast, desserts, snack brands, beverages
+  - Dairy, protein powders, convenience store items, instant foods
+- **Disclaimer** — Bilingual (CN/EN) disclaimer in SKILL.md and README.md
+- **Model Compatibility Notice** — Developed and tested on Claude Opus 4.6
+
+#### 🔧 Improved
+- SKILL.md meal analysis workflow now references cn-brands.md
+
+### v0.1.0 — 2026-03-03
+- Initial release
+
 ## Contributing
 
 PRs welcome! Areas that need help:
 
-- More cuisine databases (Japanese, Korean, Indian, etc.)
-- Garmin/Fitbit data import
-- Workout plan generators
-- Localization (currently Chinese + English)
+- 📦 **Food data** — More brands/cuisines (Japanese, Korean, Indian, SEA, etc.)
+- 🔗 **Data source integration** — FatSecret API, Open Food Facts
+- 🏋️ **Workout plan generators**
+- 📱 **Garmin/Fitbit data import**
+- 🌍 **Localization**
+
+### How to contribute food data
+
+1. Fork this repo
+2. Edit `references/cn-brands.md` following the existing format
+3. Prefer **product packaging nutrition labels** as data source
+4. Submit a PR with source noted
 
 ## Disclaimer / 免责声明
 
