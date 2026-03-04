@@ -121,3 +121,9 @@ Configure reminders in `health/reminders.md`. Supported types:
 - **Evidence-based**: Cite clinical guidelines where possible
 - **Culturally aware**: Support diverse cuisines and food traditions in meal analysis
 - **Metric + Imperial**: Support both unit systems based on user preference
+
+## Disclaimer / 免责声明
+
+⚠️ **This skill is for informational and educational purposes only. It does not provide medical diagnosis, treatment, or professional health advice. Always consult a qualified healthcare provider for medical concerns.**
+
+⚠️ **本技能提供的所有健康、营养、运动建议仅供参考，不构成医疗诊断或治疗建议。如有健康问题，请咨询专业医生。**
